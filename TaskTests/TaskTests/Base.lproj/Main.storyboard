@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TaskTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hGJ-M3-Uhl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="633"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nKc-jj-cil"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="sFq-LQ-uLl">
+                                <rect key="frame" x="177.5" y="306.5" width="20" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8H-a8-hvg">
+                                <rect key="frame" x="0.0" y="633" width="375" height="34"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.54901960780000003" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Fazer Request">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getRepos" destination="BYZ-38-t0r" eventType="touchUpInside" id="kB3-Q6-kVP"/>
+                                </connections>
+                            </button>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qQs-YG-SIk">
+                                <rect key="frame" x="93.5" y="334.5" width="187.5" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sFq-LQ-uLl" firstAttribute="centerY" secondItem="hGJ-M3-Uhl" secondAttribute="centerY" id="6VY-0o-8Qy"/>
+                            <constraint firstItem="B8H-a8-hvg" firstAttribute="top" secondItem="hGJ-M3-Uhl" secondAttribute="bottom" id="8pH-Of-4pd"/>
+                            <constraint firstItem="hGJ-M3-Uhl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BbI-Fb-lTP"/>
+                            <constraint firstItem="qQs-YG-SIk" firstAttribute="top" secondItem="sFq-LQ-uLl" secondAttribute="bottom" constant="8" id="Egs-6M-uud"/>
+                            <constraint firstItem="hGJ-M3-Uhl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FFQ-br-eoe"/>
+                            <constraint firstItem="B8H-a8-hvg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JJ4-Kt-e2R"/>
+                            <constraint firstItem="qQs-YG-SIk" firstAttribute="width" secondItem="hGJ-M3-Uhl" secondAttribute="width" multiplier="0.5" id="Tff-if-YRA"/>
+                            <constraint firstItem="hGJ-M3-Uhl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UsN-LR-ZJp"/>
+                            <constraint firstItem="qQs-YG-SIk" firstAttribute="centerX" secondItem="hGJ-M3-Uhl" secondAttribute="centerX" id="Wn9-Ff-BOX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B8H-a8-hvg" secondAttribute="trailing" id="k8A-6j-09j"/>
+                            <constraint firstItem="sFq-LQ-uLl" firstAttribute="centerX" secondItem="hGJ-M3-Uhl" secondAttribute="centerX" id="kIr-4y-k25"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B8H-a8-hvg" secondAttribute="bottom" id="tzJ-No-Usj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activiyIndicator" destination="sFq-LQ-uLl" id="9DW-QP-qeN"/>
+                        <outlet property="progressView" destination="qQs-YG-SIk" id="cKd-g9-NUV"/>
+                        <outlet property="tableView" destination="hGJ-M3-Uhl" id="IMZ-h8-F7C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
